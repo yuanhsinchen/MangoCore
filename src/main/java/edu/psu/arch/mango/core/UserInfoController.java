@@ -1,19 +1,17 @@
 package edu.psu.arch.mango.core;
 
-import java.util.concurrent.atomic.AtomicLong;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
 
-@RestController
+@Controller
 public class UserInfoController {
 
-    private static final String template = "Hello, %s!";
-    private final AtomicLong counter = new AtomicLong();
-
     @RequestMapping("/userinfo")
-    public UserInfo userinfo(@RequestParam(value="name", required=false, defaultValue="World") String name) {
-        return new UserInfo(counter.incrementAndGet(),
-                            String.format(template, name));
+    public String userinfo(@RequestParam(value="name", required=false, defaultValue="World") String name, Model model) {
+        model.addAttribute("name", name);
+        return "userinfo";
     }
+
 }
