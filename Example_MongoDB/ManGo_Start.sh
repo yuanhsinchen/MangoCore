@@ -26,10 +26,16 @@
 # Run the MongoDB daemon:
 # $ mongod  --dbpath <directory where you made /data/db/>
 
+# $ mongod --dbpath C\:/Users/Alex/workspace/Project_Mango/MangoCore/Example_MongoDB/data/db/
+
 # The primary build script
 cd initial
 ./gradlew clean build # if Gradle is set up, will build the Spring app ($ clean up old junk)
-java -jar build/libs/gs-accessing-mongodb-data-rest-0.1.0.jar # executes the jar/app
+java -jar build/libs/project_mango_test-0.1.0.jar # executes the jar/app
+#java -jar build/libs/gs-accessing-mongodb-data-rest-0.1.0.jar # old test jar....
+
+# curl http://localhost:8080/food # to see all food items in DB
+# curl -X DELETE http://localhost:8080/food/53c7ca0ca78cb82a26f57111
 
 # This was successful if you see @ the bottom of the terminal output " Started Application in X.XXX seconds (JVM running for X.X)"
 
