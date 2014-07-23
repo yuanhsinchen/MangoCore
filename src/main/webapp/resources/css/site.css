@@ -28,3 +28,23 @@ body {
   background-color: #ffa533;
   border-color: #ffa533;
 }
+
+.btn-info{
+  color: #fff;
+  background-color: #ffa533;
+  border-color: #444;
+  border-width: medium;
+}
+
+.panel-primary {
+  border-color: #ffa533;
+}
+.panel-primary > .panel-heading {
+  color: #fff;
+  background-color: #ffa533;
+  border-color: #ffa533;
+}
+
+.row {
+  margin-bottom: 20px;
+}
