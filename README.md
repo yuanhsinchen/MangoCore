@@ -1,4 +1,4 @@
-NGO
+maNGO
 =====
 maNGO technology is built to empower real world services with access to pertinent digital data streams.
 
